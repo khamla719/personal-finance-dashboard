@@ -1,0 +1,51 @@
+.dashboard-layout {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  .dashboard-layout header {
+    grid-area: header;
+  }
+  
+  .main-container {
+    grid-area: main;
+    display: flex;
+  }
+  
+  .dashboard-layout footer {
+    grid-area: footer;
+  }
+  
+  .sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+  }
+  
+  .content-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+      /* Optional: Make sidebar collapsible on small screens */
+      /* height: 50px; */
+      /* overflow: hidden; */
+    }
+  
+    .sidebar.expanded {
+      height: auto;
+    }
+  }
