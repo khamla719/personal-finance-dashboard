@@ -1,0 +1,63 @@
+/* Main grid layout for the dashboard */
+.dashboard-layout {
+    display: grid;
+    /* Define named grid areas for easy placement */
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    /* Set row sizes: auto for header/footer, 1fr (all remaining space) for main */
+    grid-template-rows: auto 1fr auto;
+    /* Ensure the layout takes up at least the full viewport height */
+    min-height: 100vh;
+  }
+  
+  /* Position header in the grid */
+  .dashboard-layout header {
+    grid-area: header;
+  }
+  
+  /* Main container: uses flexbox for sidebar and content arrangement */
+  .main-container {
+    grid-area: main;
+    display: flex;
+  }
+  
+  /* Position footer in the grid */
+  .dashboard-layout footer {
+    grid-area: footer;
+  }
+  
+  /* Set sidebar width and add transition for smooth resizing */
+  .sidebar {
+    width: 250px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Content area: takes up remaining space and allows vertical scrolling */
+  .content-area {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Stack sidebar and content vertically on small screens */
+    .main-container {
+      flex-direction: column;
+    }
+  
+    /* Make sidebar full width on small screens */
+    .sidebar {
+      width: 100%;
+      /* Uncomment below for collapsible sidebar on small screens */
+      /* height: 50px; */
+      /* overflow: hidden; */
+    }
+  
+    /* Class to expand sidebar when toggled on small screens */
+    .sidebar.expanded {
+      height: auto;
+    }
+  }
