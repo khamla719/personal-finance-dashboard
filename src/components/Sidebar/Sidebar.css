@@ -1,0 +1,42 @@
+/* Sidebar container */
+.sidebar {
+    background-color: #f0f0f0;
+    padding: 1rem;
+  }
+  
+  /* Sidebar navigation list */
+  .sidebar-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Sidebar navigation items */
+  .sidebar-nav li {
+    margin-bottom: 1rem;
+  }
+  
+  /* Sidebar navigation links */
+  .sidebar-nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Reduce padding for smaller screens */
+    .sidebar {
+      padding: 0.5rem;
+    }
+  
+    /* Arrange navigation items horizontally on small screens */
+    .sidebar-nav ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    /* Remove bottom margin on horizontal layout */
+    .sidebar-nav li {
+      margin-bottom: 0;
+    }
+  }

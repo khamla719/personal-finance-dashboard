@@ -1,0 +1,29 @@
+/* Footer container: uses flexbox for layout */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+  }
+  
+  /* Footer link styling */
+  .footer-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: #6c757d;
+  }
+  
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    /* Stack footer elements vertically */
+    .footer {
+      flex-direction: column;
+    }
+  
+    /* Add spacing between stacked elements */
+    .footer-links, .social-links {
+      margin-bottom: 0.5rem;
+    }
+  }
